@@ -3,6 +3,7 @@ os.environ["IMAGEIO_FFMPEG_EXE"] = "/opt/homebrew/bin/ffmpeg"
 from moviepy.editor import *
 
 
+
 clip = VideoFileClip("./in_process_video/video_ivyandelder.mp4").set_duration(10)
 
 duration = clip.duration
@@ -30,7 +31,7 @@ final = concatenate_videoclips([freeze_clip,Clip1, clip_mirror,freeze_clip, clip
 final.write_videofile("./in_process_video/scroll_test_faster123.mp4")
 
 """ .
-
+Patch note moviepy ffmpeg :
 ffmpeg reader.py
 def close(self):
         if self.proc:
